@@ -1,0 +1,10 @@
+{
+  "home": "Home",
+  "search": "Search {{ product }}",
+  "libraryPage": {
+    "name": "Name",
+    "inputs": "Inputs",
+    "tag": "Tag",
+    "variants": "Variants"
+  }
+}

@@ -1,0 +1,60 @@
+.lib-component {
+  border: 1px solid #ddd;
+  display: flex;
+  &__info {
+    display: flex;
+    width: 50%;
+    background-color: #f4f4f4;
+    border-right: 1px solid #eee;
+    padding: 1rem 1.5rem;
+    &--features {
+      width: 50%;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      &-item {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+        span {
+          color: lightcoral;
+          font-size: 0.9rem;
+        }
+        strong {
+          font-weight: 500;
+        }
+        i {
+          color: grey;
+        }
+        pre {
+          font-weight: bold;
+          font-size: 1rem;
+          margin: 0;
+          font-weight: 500;
+        }
+        ul {
+          margin: 0;
+          padding: 0;
+          li {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 0.25rem;
+          }
+        }
+        p-dropdown {
+          width: 100%;
+          .p-dropdown {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  &__visual {
+    padding: 1rem 1.5rem;
+    width: 50%;
+  }
+}

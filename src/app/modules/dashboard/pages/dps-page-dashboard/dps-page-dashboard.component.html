@@ -1,0 +1,40 @@
+<main class="dps-page-dashboard">
+  <!-- #region Title Section -->
+  <dps-title-page [icon]="'home'" [text]="'Dashboard'" />
+  <!-- #endregion -->
+
+  <section class="dps-page-dashboard__content">
+    <!-- #region Main Panel -->
+    <dps-panel-dashboard
+      [title]="'Main Panel'"
+      [description]="
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+      "
+      [hasOptions]="true"
+    />
+    <!-- #endregion -->
+
+    <!-- #region Secondary Panel -->
+    <dps-panel-dashboard
+      [title]="'Secondary Panel'"
+      [description]="'Secondary Panel Description'"
+      [hasOptions]="false"
+    />
+    <!-- #endregion -->
+
+    <!-- #region Card Graphics -->
+    <dps-card-graphics
+      [title]="'Card Title'"
+      [subtitle]="'Card Subtitle'"
+      [image]="
+        'https://canvasjs.com/wp-content/uploads/images/gallery/javascript-charts/overview/javascript-charts-graphs-index-data-label.png'
+      "
+      [description]="
+        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!'
+      "
+      [yesButton]="'Save'"
+      [noButton]="'Cancel'"
+    />
+    <!-- #endregion -->
+  </section>
+</main>

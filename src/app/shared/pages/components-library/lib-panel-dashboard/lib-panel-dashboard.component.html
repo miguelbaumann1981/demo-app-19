@@ -1,0 +1,72 @@
+<div class="lib-component">
+  <!-- #region INFO BLOCK -->
+  <div class="lib-component__info">
+    <ul class="lib-component__info--features">
+      <!-- #region NAME -->
+      <li class="lib-component__info--features-item">
+        <span>{{ 'libraryPage.name' | translate }}</span>
+        <strong>Panel Dashboard</strong>
+      </li>
+      <!-- #endregion NAME -->
+
+      <!-- #region INPUTS -->
+      <li class="lib-component__info--features-item">
+        <span>{{ 'libraryPage.inputs' | translate }}</span>
+        <ul>
+          <li>
+            <strong>title</strong>
+            <i>(string)</i>
+          </li>
+          <li>
+            <strong>description</strong>
+            <i>(string)</i>
+          </li>
+          <li>
+            <strong>hasOptions</strong>
+            <i>(boolean)</i>
+          </li>
+        </ul>
+      </li>
+      <!-- #endregion INPUTS -->
+    </ul>
+
+    <ul class="lib-component__info--features">
+      <!-- #region TAG -->
+      <li class="lib-component__info--features-item">
+        <span>{{ 'libraryPage.tag' | translate }}</span>
+        <pre>{{ '<' + 'dps-panel-dashboard />' }}</pre>
+      </li>
+      <!-- #endregion TAG -->
+
+      <!-- #region VARIANTS -->
+      <li class="lib-component__info--features-item">
+        <span>{{ 'libraryPage.variants' | translate }}</span>
+        <p-dropdown
+          [options]="variants()"
+          (onChange)="selectVariant($event)"
+          optionLabel="name"
+          optionValue="id"
+        ></p-dropdown>
+      </li>
+      <!-- #endregion VARIANTS -->
+    </ul>
+  </div>
+  <!-- #endregion INFO BLOCK -->
+
+  <!-- #region VISUAL BLOCK -->
+  <div class="lib-component__visual">
+    @if (selectedVariant() === '0') {
+      <dps-panel-dashboard
+        [title]="'Panel Dashboard by default'"
+        [description]="'Lorem ipsum...'"
+      />
+    } @else if (selectedVariant() === '1') {
+      <dps-panel-dashboard
+        [title]="'Panel Dashboard with options'"
+        [description]="'Lorem ipsum...'"
+        [hasOptions]="true"
+      />
+    }
+  </div>
+  <!-- #endregion VISUAL BLOCK -->
+</div>

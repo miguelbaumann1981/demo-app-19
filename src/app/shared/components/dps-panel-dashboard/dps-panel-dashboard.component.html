@@ -1,0 +1,12 @@
+<p-panel [header]="title()" [toggleable]="true">
+    <ng-template pTemplate="icons">
+      <button pButton class="p-panel-header-icon p-link">
+        @if (hasOptions()) {
+            <span class="pi pi-cog"></span>
+        }
+      </button>
+    </ng-template>
+    <p>
+      {{ description() }}
+    </p>
+  </p-panel>

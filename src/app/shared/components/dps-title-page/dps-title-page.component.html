@@ -1,0 +1,8 @@
+@if (isDesktopDesign()) {
+  <h1 class="dps-title-page">
+    <span class="material-icons dps-title-page__icon">{{ icon() }}</span>
+    <span class="dps-title-page__text">{{ text() }}</span>
+  </h1>
+} @else {
+  <h4 class="dps-title-page__responsive">{{ text() }}</h4>
+}

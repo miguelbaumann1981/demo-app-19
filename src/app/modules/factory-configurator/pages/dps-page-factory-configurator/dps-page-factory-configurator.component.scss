@@ -1,0 +1,11 @@
+.dps-page-factory-configurator {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  &__list {
+    display: flex;
+    flex-direction: row;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+  }
+}

@@ -1,0 +1,12 @@
+<div class="dps-factory-item">
+    <h2 class="dps-factory-item__title">{{ factoryItem()?.name }}</h2>
+    <h3 class="dps-factory-item__subtitle">{{ factoryItem()?.location }}</h3>
+    <h4 class="dps-factory-item__employees">{{ factoryItem()?.numberOfEmployees }} Employees</h4>
+    <h5 class="dps-factory-item__date">From {{ factoryItem()?.dateOfBuilding }}</h5>
+    <span>Products:</span>
+    <ul>
+        @for (product of factoryItem()?.manufacturingProducts; track product) {
+            <li>{{ product }}</li>
+        }
+    </ul>
+</div>

@@ -1,0 +1,61 @@
+<div class="lib-component">
+  <!-- #region INFO BLOCK -->
+  <div class="lib-component__info">
+    <ul class="lib-component__info--features">
+      <!-- #region NAME -->
+      <li class="lib-component__info--features-item">
+        <span>{{ 'libraryPage.name' | translate }}</span>
+        <strong>Title Page</strong>
+      </li>
+      <!-- #endregion NAME -->
+
+      <!-- #region INPUTS -->
+      <li class="lib-component__info--features-item">
+        <span>{{ 'libraryPage.inputs' | translate }}</span>
+        <ul>
+          <li>
+            <strong>text</strong>
+            <i>(string)</i>
+          </li>
+          <li>
+            <strong>icon</strong>
+            <i>(string)</i>
+          </li>
+        </ul>
+      </li>
+      <!-- #endregion INPUTS -->
+    </ul>
+
+    <ul class="lib-component__info--features">
+      <!-- #region TAG -->
+      <li class="lib-component__info--features-item">
+        <span>{{ 'libraryPage.tag' | translate }}</span>
+        <pre>{{ '<' + 'dps-title-page />' }}</pre>
+      </li>
+      <!-- #endregion TAG -->
+
+      <!-- #region VARIANTS -->
+      <li class="lib-component__info--features-item">
+        <span>{{ 'libraryPage.variants' | translate }}</span>
+        <p-dropdown
+          [options]="variants()"
+          (onChange)="selectVariant($event)"
+          optionLabel="name"
+          optionValue="id"
+        ></p-dropdown>
+      </li>
+      <!-- #endregion VARIANTS -->
+    </ul>
+  </div>
+  <!-- #endregion INFO BLOCK -->
+
+  <!-- #region VISUAL BLOCK -->
+  <div class="lib-component__visual">
+    @if (selectedVariant() === '0') {
+      <dps-title-page [text]="'Title page by default'" [icon]="'home'" />
+    } @else if (selectedVariant() === '1') {
+      <dps-title-page [text]="'Title page without icon'" />
+    }
+  </div>
+  <!-- #endregion VISUAL BLOCK -->
+</div>

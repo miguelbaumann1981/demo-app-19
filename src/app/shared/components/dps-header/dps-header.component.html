@@ -1,0 +1,17 @@
+<!-- #region Menubar -->
+<p-menubar [model]="items()">
+  <!-- #region Header -->
+  <div class="dps-header">
+    <!-- #region Search Input -->
+    <input type="text" pInputText placeholder="{{ 'search' | translate: { product: some() } }}" />
+    <!-- #endregion Search Input -->
+
+    <!-- #region Library Button -->
+    <button routerLink="/library" type="button" pButton label="Library" icon="pi pi-th-large">
+      &#8203;
+    </button>
+    <!-- #endregion Library Button -->
+  </div>
+  <!-- #endregion Header -->
+</p-menubar>
+<!-- #endregion Menubar -->

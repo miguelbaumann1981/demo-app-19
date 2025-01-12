@@ -1,0 +1,19 @@
+<section class="dps-page-factory-configurator">
+    <!-- #region Title Section -->
+    <dps-title-page [icon]="'factory'" [text]="'Factory Configurator'" />
+    <!-- #endregion -->
+
+    <!-- #region Factory List Section -->
+    <div class="dps-page-factory-configurator__list">
+        @for (item of factoryList(); track item?.id) {
+            <dps-factory-item [factoryItem]="item" />
+        }
+    </div>
+    <!-- #endregion -->
+
+    <!-- #region Error Message Section -->
+    @if(isErrorService()) {
+        <p-message severity="warn" [text]="errorMessage()" styleClass="mr-2"></p-message>
+    }
+    <!-- #endregion -->
+</section>

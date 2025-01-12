@@ -1,0 +1,22 @@
+<p-card [header]="title()" [subheader]="subtitle()" styleClass="p-card-shadow">
+    <ng-template pTemplate="header">
+      <img
+        alt="Card"
+        [src]="image()"
+      />
+    </ng-template>
+    <p>
+      {{ description() }}
+    </p>
+    @if (hasActions()) {
+        <ng-template pTemplate="footer">
+          <p-button [label]="yesButton()" icon="pi pi-check"></p-button>
+          <p-button
+            [label]="noButton()"
+            icon="pi pi-times"
+            styleClass="p-button-secondary"
+            [style]="{ 'margin-left': '.5em' }"
+          ></p-button>
+        </ng-template>
+    }
+  </p-card>
