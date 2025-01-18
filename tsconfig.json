@@ -8,7 +8,7 @@
       "@dashboard/*": ["src/app/modules/dashboard/*"],
       "@shared/*": ["src/app/shared/*"],
       "@factoryConfigurator/*": ["src/app/modules/factory-configurator/*"],
-      "@styles/*": ["src/styles/*"]
+      "@sharedStyles/*": ["src/shared-styles/*"]
     },
     "outDir": "./dist/out-tsc",
     "strict": true,
